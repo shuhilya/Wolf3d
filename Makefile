@@ -29,7 +29,7 @@ FILES = main.c \
 
 OBJ = $(FILES:%.c=%.o)
 
-CFLAGS = -I./minilibx_macos -I /libft -I.\
+CFLAGS = -I./minilibx_macos -I./libft -I.\
 	-L./minilibx_macos -lmlx -L./libft -lft -framework OpenGL -framework AppKit -framework OpenCL
 
 all: $(NAME)
@@ -40,7 +40,7 @@ $(NAME): $(OBJ)
 	cc $(CFLAGS) $(OBJ) -o $(NAME)
 
 $(OBJ): %.o:%.c
-	gcc -Wall -Wextra -Werror -I. -I./libft -c $(FILES)
+	gcc -Wall -Wextra -Werror -I. -I./libft -I./minilibx_macos  -c $(FILES)
 
 clean: 
 	rm -f $(OBJ)

@@ -19,7 +19,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <float.h>
-# include <mlx.h>
+# include "mlx.h"
 # include "fdf.h"
 # include "libft.h"
 # define BLOCK  512
